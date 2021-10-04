@@ -15,6 +15,8 @@
     <mvc:default-servlet-handler/>
     <!--支持mvc注解驱动-->
     <mvc:annotation-driven/>
+    <!--开启注解支持-->
+    <context:annotation-config/>
     <!--自动扫描 让指定包下的注解生效-->
     <context:component-scan base-package="controller"/>
 
