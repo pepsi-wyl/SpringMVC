@@ -11,6 +11,8 @@ import java.util.Map;
 /**
  * @author by wyl
  * @date 2021/10/5.21点32分
+ * 
+ * 依赖lombok
  */
 
 public class GsonUtils {
