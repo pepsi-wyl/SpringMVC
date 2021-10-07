@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>json</title>
+</head>
+<body>
+
+<script>
+
+  /**
+   * json  类型定义
+   */
+  let jsonObj = {
+
+    "key1": 12,                    //数值
+    "key2": "abc",                 //字符
+    "key3": true,                  //布尔值
+    "key4": [12, "abc", true],     //数组
+
+    "key5": {                      //json类型
+      "key5_1": 12,
+      "key5_2": "abc",
+      "key5_3": true,
+      "key5_4": [12, "abc", true],
+      "key5_5": {                   //json类型中还可以是json类型(套娃)
+        "key5_5_1": 12,
+        "key5_5_2": "abc",
+        "key5_5_3": true,
+        "key5_5_4": [12, "abc", true],
+      }
+    },
+
+    "key6": [{                   //json数组类型
+      "key6_1": 12,
+      "key6_2": "abc",
+      "key6_3": true,
+      "key6_5": [12, "abc", true],
+      "key6_5":                //json数组类型中的json元素还可以是json类型(套娃)
+        {
+          "key6_5_1": 12,
+          "key6_5_2": "abc",
+          "key6_5_3": true,
+          "key6_5_4": [12, "abc", true],
+        }
+    }, {
+      "key6_1": 12,
+      "key6_2": "abc",
+      "key6_3": true,
+      "key6_5": [12, "abc", true],
+      "key6_5":
+        {
+          "key6_5_1": 12,
+          "key6_5_2": "abc",
+          "key6_5_3": true,
+          "key6_5_4": [12, "abc", true],
+        }
+    }
+    ]
+
+  };
+
+  /**
+   * json  访问元素和json对象利用.  访问数组则利用下标
+   */
+  // alert(jsonObj.key1);
+  // alert(jsonObj.key2);
+  // alert(jsonObj.key3);
+  // alert(jsonObj.key4[2]);
+  // alert(jsonObj.key5.key5_5.key5_5_4[2]);
+
+  /**
+   * json实际上是对象(object)
+   */
+  // alert(typeof (jsonObj));
+
+  /**
+   *  Json的常用方法   stringify()  stringify()
+   */
+    //JSON.stringify() ------>把json对象转化成字符串
+  let jsonObjString = JSON.stringify(jsonObj);
+  alert(jsonObjString);
+  console.log(jsonObjString)
+
+  //JSON.stringify()     ------>把json字符串转化成对象
+  let jsonObj_transform = JSON.parse(jsonObjString);
+  alert(jsonObj_transform.key1);
+  console.log(jsonObj_transform)
+
+</script>
+
+</body>
+</html>
