@@ -19,11 +19,6 @@ import java.util.*;
  */
 
 /**
- * @Controller +  @ResponseBody 方法返回JSON字符串
- * @RestController 直接使用该注解，类的方法全部返回JSON字符串
- */
-
-/**
  produces = "application/json;charset=utf-8"    设置中文相应乱码相应     在MVC配置直接配置(通用配置)
  @RequestMapping(value = "/XXX", method = RequestMethod.XXX ,produces = "application/json;charset=utf-8")
  */
