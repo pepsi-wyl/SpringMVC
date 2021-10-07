@@ -10,8 +10,11 @@ import java.util.Map;
 
 /**
  * @author by wyl
- * @date 2021/10/5.20点22分
+ * @date 2021/10/5.21点32分
+ * 
+ * 依赖lombok
  */
+
 public class JsonUtils {
 
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";    //解析时间格式
