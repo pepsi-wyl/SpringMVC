@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+">
 
     <!--  添加 处理映射器     获取Handler  -->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <!--  添加 处理器适配器   获取ModelAndView -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
-    <!--  视图解析器:DispatcherServlet给他的ModelAndView  获取View-->
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="InternalResourceViewResolver">
+    <!--  视图解析器:DispatcherServlet给他的ModelAndView   获取View-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          id="InternalResourceViewResolver">
         <!--前缀-->
         <property name="prefix" value="/jsp/"/>
         <!--后缀-->
@@ -18,6 +21,6 @@
     </bean>
 
     <!--Handler-->
-    <bean id="/hello" class="controller.HelloSpringMVC"/>
+    <bean id="/hello" class="controller.SpringMVC"/>
 
 </beans>
