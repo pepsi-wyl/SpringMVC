@@ -5,7 +5,7 @@
          version="4.0">
 
 
-    <!--配置注册:DispatcherServlet  SpringMVC的核心(请求分发器)-->
+    <!--配置注册:DispatcherServlet   SpringMVC的核心(请求分发器，前端控制器)-->
     <servlet>
         <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -14,7 +14,7 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc-servlet.xml</param-value>
         </init-param>
-        <!--启动级别-->
+        <!--启动级别为1-->
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
@@ -25,3 +25,11 @@
 
 
 </web-app>
+
+
+
+
+
+
+
+
