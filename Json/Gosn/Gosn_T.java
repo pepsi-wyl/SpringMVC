@@ -8,7 +8,7 @@ import pojo.Person;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Json_T {
+public class Gosn_T {
 
   /**
    * 利用gson  解析java数据 生成json数据
