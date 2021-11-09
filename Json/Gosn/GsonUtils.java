@@ -11,14 +11,14 @@ import java.util.Map;
 /**
  * @author by wyl
  * @date 2021/10/5.21点32分
- * 
+ *
  * 依赖lombok
  */
 
 public class GsonUtils {
 
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";    //解析时间格式
-    private static Gson gson = null;
+    private static Gson gson = null;                                    //私有化Gosn对象
 
     //无参的私有构造方法
     private GsonUtils() {
@@ -28,10 +28,10 @@ public class GsonUtils {
     static {
         if (gson == null) {
             gson = new GsonBuilder()
-                    .setLenient()                          // json宽松
+                    .setLenient()                          //json宽松
                     .enableComplexMapKeySerialization()    //支持Map的key为复杂对象的形式
                     .serializeNulls()                      //智能null
-                    .setPrettyPrinting()                   // 调教格式
+                    .setPrettyPrinting()                   //调教格式
                     .disableHtmlEscaping()                 //默认是GSON把HTML 转义的
                     .setDateFormat(DATE_FORMAT)
                     .create();
@@ -90,3 +90,4 @@ public class GsonUtils {
 
 
 }
+
