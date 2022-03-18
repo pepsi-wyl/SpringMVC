@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>SpringMVC首页</h1>
+
+<!--<form th:action="@{/user/pojo}" method="post">-->
+<!--    用户名：<input type="text" name="userName"><br>-->
+<!--    密码：<input type="password" name="password"><br>-->
+<!--    性别：<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女<br>-->
+<!--    年龄：<input type="text" name="age"><br>-->
+<!--    邮箱：<input type="text" name="email"><br>-->
+<!--    <input type="submit">-->
+<!--</form>-->
+
+<!--<a th:href="@{/scope/servletAPI}">ServletAPI</a>-->
+<!--<a th:href="@{/scope/modelAndView}">ModelAndersonView</a>-->
+<!--<a th:href="@{/scope/model}">Model</a>-->
+<!--<a th:href="@{/scope/map}">Map</a>-->
+<!--<a th:href="@{/scope/modelMap}">ModelMap</a>-->
+<!--<a th:href="@{/scope/session}">Session</a>-->
+<!--<a th:href="@{/scope/application}">Application</a>-->
+
+
+<!--<a th:href="@{/view/thymeleaf}">Thymeleaf</a>-->
+<!--<a th:href="@{/view/forward}">Forward</a>-->
+<!--<a th:href="@{/view/redirect}">Redirect</a>-->
+
+
+<!--<a th:href="@{/user}">得到所有用户信息</a> <br/>-->
+<!--<a th:href="@{/user/1}">根据ID查询用户信息</a> <br/>-->
+<!--<form th:action="@{/user}" method="post">-->
+<!--    userName:<input type="text" name="userName"> <br/>-->
+<!--    password:<input type="password" name="password"> <br/>-->
+<!--    <input type="submit" value="添加">-->
+<!--</form>-->
+<!--<form th:action="@{/user}" method="post">-->
+<!--    &lt;!&ndash; HiddenHttpMethodFilter要求：必须传输_method请求参数，并且值为最终的请求方式 &ndash;&gt;-->
+<!--    <input type="hidden" name="_method" value="put">-->
+<!--    userName:<input type="text" name="userName"> <br/>-->
+<!--    password:<input type="password" name="password"> <br/>-->
+<!--    <input type="submit" value="修改">-->
+<!--</form>-->
+<!--<form th:action="@{/user/1}" method="post">-->
+<!--    &lt;!&ndash; HiddenHttpMethodFilter要求：必须传输_method请求参数，并且值为最终的请求方式 &ndash;&gt;-->
+<!--    <input type="hidden" name="_method" value="delete"/>-->
+<!--    <input type="submit" value="删除">-->
+<!--</form>-->
+
+
+<!--跳转查询所有员工Controller请求-->
+<!--<a th:href="@{/employee}">查询所有员工信息</a>-->
+
+
+<!--<form th:action="@{/requestBody}" method="post">-->
+<!--    用户名：<input type="text" name="username"><br>-->
+<!--    密码：<input type="password" name="password"><br>-->
+<!--    <input type="submit" value="@RequestBody获取请求体">-->
+<!--</form>-->
+<!--<a th:href="@{/responseBody}">@ResponseBody返回JSON类型数据</a>-->
+<!--<a th:href="@{/restController}">@RestController 衍生注解</a>-->
+<!--<a th:href="@{/requestEntity}">RequestEntity类型</a>-->
+<!--<br>-->
+
+<!--<a th:href="@{/JSON_Gson/test1}">/JSON_Gson/test1</a>-->
+<!--<a th:href="@{/JSON_Gson/test2}">/JSON_Gson/test2</a>-->
+<!--<a th:href="@{/JSON_Gson/test3}">/JSON_Gson/test3</a>-->
+<!--<a th:href="@{/JSON_Gson/test4}">/JSON_Gson/test4</a>-->
+<!--<a th:href="@{/JSON_Gson/test5}">/JSON_Gson/test5</a>-->
+<!--<a th:href="@{/JSON_Gson/test6}">/JSON_Gson/test6</a>-->
+<!--<a th:href="@{/JSON_Gson/test7}">/JSON_Gson/test7</a>-->
+<!--<a th:href="@{/JSON_Gson/test8}">/JSON_Gson/test8</a>-->
+<!--<br>-->
+<!--<a th:href="@{/JSON_Jackson/test1}">/JSON_Jackson/test1</a>-->
+<!--<a th:href="@{/JSON_Jackson/test2}">/JSON_Jackson/test2</a>-->
+<!--<a th:href="@{/JSON_Jackson/test3}">/JSON_Jackson/test3</a>-->
+<!--<a th:href="@{/JSON_Jackson/test4}">/JSON_Jackson/test4</a>-->
+<!--<a th:href="@{/JSON_Jackson/test5}">/JSON_Jackson/test5</a>-->
+<!--<a th:href="@{/JSON_Jackson/test6}">/JSON_Jackson/test6</a>-->
+<!--<a th:href="@{/JSON_Jackson/test7}">/JSON_Jackson/test7</a>-->
+<!--<a th:href="@{/JSON_Jackson/test8}">/JSON_Jackson/test8</a>-->
+<!--<br>-->
+
+<!--<div id="axios">-->
+<!--    <a th:href="@{/axios}" @click="ToAxios">ToAxios</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; 官网提供的 axios 在线地址 &ndash;&gt;-->
+<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+<!--&lt;!&ndash; 开发环境版本，包含了有帮助的命令行警告 &ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<!--<script type="text/javascript">-->
+<!--    const axios = new Vue({-->
+<!--        el: '#axios',-->
+<!--        methods: {-->
+<!--            ToAxios: function (event) {-->
+<!--                event.preventDefault();  // 取消链接的默认事件-->
+<!--                axios({-->
+<!--                    method: "post",      // 发送请求-->
+<!--                    url: event.target.href,-->
+<!--                    params: {-->
+<!--                        username: "武扬岚",-->
+<!--                        password: "999999",-->
+<!--                    }-->
+<!--                }).then(function (response) { // 响应成功-->
+<!--                    alert(response.data);-->
+<!--                });-->
+<!--            }-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+
+<!--文件-->
+<a th:href="@{/file}">文件</a>
+
+<!--拦截器-->
+<a th:href="@{/interceptor}">拦截器</a>
+
+<!--异常测试-->
+<a th:href="@{/exception}">异常测试</a>
+
+</body>
+</html>

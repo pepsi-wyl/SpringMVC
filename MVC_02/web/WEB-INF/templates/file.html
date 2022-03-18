@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FILE</title>
+</head>
+<body>
+
+<!--文件下载-->
+<a th:href="@{/file/fileDown}">文件下载1</a> <br/>
+<a th:href="@{/file/down}">文件下载2</a> <br/>
+
+<!--文件上传-->
+<form th:action="@{/file/fileUp}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="上传">
+</form>
+
+</body>
+</html>
